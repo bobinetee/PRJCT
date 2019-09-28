@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/Num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:hint="Цена товара"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/Num2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="% скидки"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/Rs"
+        app:layout_constraintEnd_toEndOf="@+id/Num1"
+        app:layout_constraintStart_toStartOf="@+id/Num1"
+        app:layout_constraintTop_toBottomOf="@+id/Num1" />
+
+    <TextView
+        android:id="@+id/Rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Цена с учетом %"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sum"
+        app:layout_constraintEnd_toEndOf="@+id/Num2"
+        app:layout_constraintStart_toStartOf="@+id/Num2"
+        app:layout_constraintTop_toBottomOf="@+id/Num2" />
+
+    <Button
+        android:id="@+id/sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="340dp"
+        android:onClick="OnButtonClick"
+        android:text="Рассчитать"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Rs"
+        app:layout_constraintStart_toStartOf="@+id/Rs"
+        app:layout_constraintTop_toBottomOf="@+id/Rs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
